@@ -1,0 +1,33 @@
+{
+  "name": "agentbox",
+  "version": "0.1.0",
+  "description": "Autonomous Agent Execution Gateway & Safe Sandbox with MCP Support",
+  "type": "module",
+  "main": "./src/index.js",
+  "bin": {
+    "agentbox": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "benchmark": "node --test tests/benchmark.test.js"
+  },
+  "keywords": [
+    "ai-agent",
+    "mcp",
+    "model-context-protocol",
+    "sandbox",
+    "security",
+    "token-budgeting",
+    "evals"
+  ],
+  "author": "Duc-nam-enzo1203",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Duc-nam-enzo1203/agentbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Duc-nam-enzo1203/agentbox/issues"
+  },
+  "homepage": "https://github.com/Duc-nam-enzo1203/agentbox#readme"
+}

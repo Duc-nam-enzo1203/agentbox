@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  agentbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agentbox-gateway
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - HOST=0.0.0.0
+      - AGENTBOX_WORKSPACE=/app/workspace
+    volumes:
+      - agentbox-workspace:/app/workspace
+      - agentbox-audit-logs:/app/logs
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 64M
+    security_opt:
+      - no-new-privileges:true
+    read_only: false
+    tmpfs:
+      - /tmp
+
+volumes:
+  agentbox-workspace:
+  agentbox-audit-logs:

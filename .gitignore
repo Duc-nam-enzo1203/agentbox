@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Logs & Audit WAL outputs
+logs/
+*.log
+audit_trail.jsonl
+
+# Temporary sandbox workspaces
+workspace/
+temp/
+tmp/
+.cache/
+coverage/
+
+# OS metadata
+.DS_Store
+Thumbs.db

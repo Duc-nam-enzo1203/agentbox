@@ -1,0 +1,7 @@
+node_modules
+.git
+.github
+.cache
+tests
+*.log
+scratch
